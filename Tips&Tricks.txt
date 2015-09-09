@@ -1,0 +1,91 @@
+<<---OUTLOOK:--->>
+from:(anja hennig)
+
+
+<<---UNIX/LINUX--->>
+										Basics
+startx 	startet das X-Window-System und eine grafische Benutzeroberfläche
+logout 	ordnungsgemäßes Abmelden von der Konsole
+[BEFEHL] --help 	gibt einen kurzen Hilfetext zum [BEFEHL] aus
+man [BEFEHL] 	zeigt die Manual-Page zum [BEFEHL] an
+info [BEFEHL] 	zeigt Dokument zu [BEFEHL] im Info-System an
+shutdown -r now 	Rechner neustarten
+shutdown -h now 	Rechner herunterfahren
+
+										Suchen
+whereis [PROGRAMM] 	sucht in den Verzeichnissen der Umgebungsvariablen PATH nach [PROGRAMM]
+find . | grep [DATEI] 	sucht ausgehend vom aktuellen Verzeichnis nach [DATEI]
+grep [SUCHSTRING] [DATEI] 	durchsucht DATEI nach dem Suchbegriff [SUCHSTRING]
+locate [DATEI] 	durchsucht die Locate-Datenbank nach [DATEI]
+
+										Programme starten
+[PROG] 	Programm [PROG], welches sich im Pfad befindet, starten
+./[PROG] 	Programm [PROG], welches sich im aktuellen Verzeichnis befindet, starten
+[PFAD]/[PROG] 	Programm [PROG], welches sich im Verzeichnis [PFAD] befindet, starten
+
+										Navigation im Dateisystem
+pwd 	gibt das aktuelle Verzeichnis aus
+cd / 	wechselt ins Hauptverzeichnis
+cd .. 	wechselt in das übergeordnete Verzeichnis
+cd [VERZ] 	wechselt ins Verzeichnis [VERZ]
+cd - 	wechselt in das vorherige Verzeichnis
+cd 	wechselt ins Home-Verzeichnis des Benutzers
+
+										Dateien
+cat [DATEI] 	zeigt den Inhalt der Datei [DATEI] auf dem Bildschirm an
+more [DATEI] 	zeigt den Inhalt der Datei [DATEI] seitenweise an
+less [DATEI] 	wie more, man kann aber auch nach oben blättern
+cp [DATEI1] [DATEI2] 	kopiert Datei [DATEI1] in Datei [DATEI2]
+mv [DATEI1] [DATEI2] 	benennt Datei [DATEI1] in [DATEI2] um
+mv [DATEI] [VERZ] 	verschiebt Datei [DATEI] ins Verzeichnis [VERZ]
+rm [DATEI] 	löscht die Datei [DATEI]
+touch [DATEI] 	erzeugt die leere Datei [DATEI]
+
+										Verzeichnisse
+ls 	kurze Liste des Verzeichnisinhaltes
+ls -l 	ausführliche Liste des Verzeichnisinhaltes
+ls -la 	alle Dateien des Verzeichnisses ausführlich auflisten
+mkdir [VERZ] 	neues Verzeichnis [VERZ] erstellen
+rmdir [VERZ] 	das leere Verzeichnis [VERZ] löschen
+rm -rf [VERZ] 	alle Dateien/Verzeichnisse unterhalb des Verzeichnisses [VERZ] löschen
+
+										Geräte partitionieren, formatieren, überprüfen, mounten
+fdisk [DEVICE] 	Partitionierung der Festplatte [DEVICE]
+mke2fs [DEVICE] 	Anlegen eines ext2-Dateisystems auf dem Gerät [DEVICE]
+fsck [DEVICE] 	Gerät [DEVICE] auf Fehler überprüfen
+mount /mnt/cdrom 	bindet eine eingelegte CD-ROM in das Dateisystem ein
+umount /mnt/cdrom 	entfernt eine CD-ROM aus dem Dateisystem
+
+										Zugriffsrechte
+chmod [OPTIONEN] [DATEI] 	ändert die Zugriffsrechte der Datei [DATEI]
+chgrp [GRUPPE] [DATEI] 	ändert die Gruppe der Datei [DATEI] in [GRUPPE]
+chown [OWNER] [DATEI] 	ändert den Eigentümer der Datei [DATEI] in [OWNER]
+
+										Systeminformationen
+mount 	Ausgabe aller gemounteter Partitionen/Geräte
+df 	Ausgabe der Nutzung der gemounteten Geräte
+date 	Anzeige von Datum und Uhrzeit
+free 	gibt die Nutzung des Arbeitsspeichers aus
+uptime 	zeigt die Prozessorauslastung und -laufzeit an
+top 	zeigt die höchsten Ressourcenverbraucher an
+ps ax 	zeigt Informationen über laufende Prozesse an
+kill [PID] 	beendet den Prozess mit der Prozess-ID [PID]
+killall [PROZESSNAME] 	beendet alle Prozesse mit dem Namen [PROZESSNAME] (z. B. mozilla)
+uname -a 	gibt Kernel-Informationen aus
+arch 	zeigt die Prozessorfamilie an
+
+										Benutzerverwaltung
+id 	gibt deinen Benutzernamen und die Gruppenmitgliedschaften aus
+whoami 	Wer bin ich? Ausgabe des Benutzernamens
+who 	Wer ist alles eingeloggt? Ausgabe der Benutzernamen, des Terminals und der Login-Zeit.
+passwd 	ändert das Passwort des aktuellen Benutzers
+useradd -m [USERNAME] 	legt den neuen Benutzer [USERNAME] an und erzeugt ein Homeverzeichnis
+passwd [USERNAME] 	ändert das Passwort des Benutzers [USERNAME] (nur als root)
+userdel -r [USERNAME] 	löscht den Benutzer [USERNAME] und sein Homeverzeichnis
+groupadd [GRUPPE] 	erzeugt eine neue Gruppe [GRUPPE]
+groupdel [GRUPPE] 	löscht die Gruppe [GRUPPE]
+
+
+<<---FEHLERLISTE--->>
+workarounds für die IDE // wenn im RSA ein projekt nicht erkannt wird: gehe auf properties/maven/update projekt/ force depandencys
+							nur beim webservice aufpassen da werden andere sachen mitgelöschtx
