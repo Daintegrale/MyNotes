@@ -2,6 +2,11 @@
 from:(anja hennig)
 
 
+>>>>>>>>>>>My new Version A Funktions<<<<<<<<<<<<<
+Bla bla...
+
+
+
 <<---UNIX/LINUX--->>
 										Basics
 startx 	startet das X-Window-System und eine grafische Benutzeroberfläche
